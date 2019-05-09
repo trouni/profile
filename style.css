@@ -79,6 +79,7 @@ a, a:hover {
 
 #uber-rating span {
   font-size: 2em;
+  font-family: 'Lato', sans-serif;
 }
 
 .star-1 { transition: .3s; }
@@ -116,7 +117,7 @@ a, a:hover {
 }
 
 .inline-icons li > a:hover {
-  color: white;
+  color: darkgrey;
 }
 
 .centered {
@@ -167,14 +168,19 @@ a, a:hover {
   transition: .3s;
   margin: 0 auto 0 auto;
 }
-#header .section-secondary {
+
+.foldable-secondary .section-secondary {
   margin: -5em auto 0 auto;
-}
-#header:hover .section-secondary {
-  margin: 0 auto 0 auto;
+  color: rgba(28,41,62,0);
 }
 
-#header:hover {
+.foldable-secondary:hover .section-secondary {
+  background-color: #EAEBED;
+  margin: 0 auto 0 auto;
+  color: rgba(28,41,62,1);
+}
+
+.foldable-secondary:hover {
   margin: 5em auto 5em auto;
 }
 
