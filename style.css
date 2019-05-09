@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400|Raleway:200,400');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400|Raleway:200,400|Lato:400,700');
 
 * {
   margin: 0;
@@ -6,12 +6,13 @@
 }
 
 body {
+  color: rgba(28,41,62,1);
   text-align: center;
   background: rgb(28,41,62);
-  /*background: radial-gradient(circle, rgba(28,41,62,1) 0%, rgba(49,54,66,0.9262079831932774) 35%, rgba(86,97,113,1) 100%);*/
   background: linear-gradient(rgba(28,41,62,1) 0%, rgba(49,54,66,0.9262079831932774) 75%, rgba(86,97,113,1) 100%);
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
+  transition: .3s;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,6 +23,8 @@ h1, h2, h3, h4, h5, h6 {
 a, a:hover {
   text-decoration: none;
 }
+
+/* HEADER */
 
 #header-photo-container {
   position: relative;
@@ -67,8 +70,8 @@ a, a:hover {
 }
 
 #header-description {
-  margin-top: -25px;
-  z-index: 10;
+  margin-top: -2.5em;
+  z-index: 100;
   position: relative;
   max-width: 500px;
   padding-top: 80px;
@@ -77,6 +80,14 @@ a, a:hover {
 #uber-rating span {
   font-size: 2em;
 }
+
+.star-1 { transition: .3s; }
+.star-2 { transition: .5s; }
+.star-3 { transition: .7s; }
+.star-4 { transition: .9s; }
+.star-5 { transition: 1s; }
+
+#header-description:hover .rating-star { color: gold; }
 
 #uber-score {
   text-transform: uppercase;
@@ -99,21 +110,25 @@ a, a:hover {
 }
 
 .inline-icons li > a {
-  color: white;
+  color: rgba(28,41,62,1);
   font-size: 3em;
+  transition: .3s;
 }
 
 .inline-icons li > a:hover {
-  color: rgba(28,41,62,1);
+  color: white;
 }
 
 .centered {
   margin: 0 auto;
 }
 
+/* SECTIONS */
+
 .section {
-  margin: 100px auto;
+  margin: 5em auto 10em auto;
   max-width: 800px;
+  transition: 0.3s;
 }
 
 .section h2 {
@@ -128,7 +143,7 @@ a, a:hover {
 }
 
 .section-main {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #EAEBED;
   padding: 50px 15%;
   border-radius: 10px;
   width: 60%;
@@ -139,16 +154,28 @@ a, a:hover {
 }
 
 .section-secondary {
-  background-color: rgba(195, 195, 195, 0.9);
+  background-color: #B5B6B7;
   padding: 20px 40px 25px 40px;
   width: 60%;
   max-width: 500px;
-  color: white;
+  /*color: white;*/
   border-radius: 0 0 10px 10px;
   /*width: 30%;*/
-  margin: 0 auto;
-  box-shadow: 10px 61px 88px -53px rgba(0,0,0,0.7);
+  box-shadow: 10px 30px 50px -25px rgba(0,0,0,0.9);
+  position: relative;
   z-index: 10;
+  transition: .3s;
+  margin: 0 auto 0 auto;
+}
+#header .section-secondary {
+  margin: -5em auto 0 auto;
+}
+#header:hover .section-secondary {
+  margin: 0 auto 0 auto;
+}
+
+#header:hover {
+  margin: 5em auto 5em auto;
 }
 
 .section-button {
@@ -157,26 +184,29 @@ a, a:hover {
   font-weight: 400;
   padding: 20px;
   width: 20%;
-  margin: 0 auto 100px auto;
+  margin: -1.5em auto 0 auto;
   border-radius: 0 0 10px 10px;
-  z-index: 10;
+  z-index: 1;
   position: relative;
   /*box-shadow: 10px 61px 88px -53px black;*/
-  box-shadow: 0px 10px 70px -23px #FF2525, 0px 30px 100px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 50px 50px -40px #FF2525, 0px 30px 100px 0px rgba(0,0,0,0.5);
   letter-spacing: 5px;
   opacity: 0.8;
+  transition: .3s;
+  padding-top: 3em;
+  overflow: hidden;
 }
 
 .section-button:hover {
-  background-position: right center;
   opacity: 1;
+  margin: 0 auto -1.5em auto;
+  margin-bottom: -1.5em;
+  box-shadow: 0px 30px 50px -30px #FF2525, 0px 30px 100px 0px rgba(0,0,0,0.5);
 }
 
 .section-button a {
   color: white;
-  width: 100%;
   text-transform: uppercase;
-  /*letter-spacing: 7px;*/
 }
 
 .number-icons li {
@@ -185,8 +215,9 @@ a, a:hover {
 }
 
 .number-icons span {
-  font-size: 2em;
-  font-family: "Lato"
+  font-size: 3em;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
 }
 
 .number-icons p {
